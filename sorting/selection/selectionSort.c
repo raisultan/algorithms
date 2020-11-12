@@ -6,7 +6,6 @@ int *selectionSort(int *source, int length) {
 	int *array = malloc(length * sizeof(int));
 	memcpy(array, source, length * sizeof(int));
 
-	int switchPos = 0;
 	for(int i = 0; i < length; i++) {
 		int minPos = i;
 
@@ -17,10 +16,8 @@ int *selectionSort(int *source, int length) {
 		}
 
 		int temp = array[minPos];
-		array[minPos] = array[switchPos];
-		array[switchPos] = temp;
-
-		switchPos++;
+		array[minPos] = array[i];
+		array[i] = temp;
 	}
 
 	return array;
