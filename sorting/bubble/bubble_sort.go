@@ -18,5 +18,5 @@ func bubbleSort(source []int) []int {
 func main() {
 	source := []int{2, 7, 0, 12, -38}
 
-	sortedArray := BubbleSort(source)
+	sortedArray := bubbleSort(source)
 }
