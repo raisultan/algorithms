@@ -24,7 +24,4 @@ void main() {
 	int length = sizeof(array) / sizeof(int);
 
 	int *sortedArray = bubbleSort(array, length);
-	for(int i = 0; i < length; i++) {
-		printf("%d\n", sortedArray[i]);
-	}
 }
