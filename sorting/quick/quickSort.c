@@ -10,8 +10,8 @@ int partition(int *array, int lo, int hi) {
     int pivot = hi;
 
     while (lo < hi) {
-        while (array[lo] <= array[pivot]) lo++;
-        while (array[hi] > array[pivot]) hi--;
+        while (lo < hi && array[lo] <= array[pivot]) lo++;
+        while (hi >= 0 && array[hi] > array[pivot]) hi--;
         if (lo < hi) swap(&array[lo], &array[hi]);
     }
 
